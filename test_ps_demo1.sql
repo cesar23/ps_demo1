@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-12-2017 a las 23:09:11
+-- Tiempo de generación: 19-12-2017 a las 23:14:32
 -- Versión del servidor: 10.1.25-MariaDB
 -- Versión de PHP: 5.6.31
 
@@ -2525,9 +2525,9 @@ INSERT INTO `ps_condition` (`id_condition`, `id_ps_condition`, `type`, `request`
 (15, 542, 'sql', 'SELECT \'{config} PS_VERSION_DB{/config}\' >= \'1.7.0.0\' AND < \'1.8.0.0\'', '==', '1', '0', 'time', '1', 0, '2017-12-19 23:02:55', '2017-12-19 23:04:00'),
 (16, 1, 'configuration', 'PS_REWRITING_SETTINGS', '==', '1', '1', 'hook', 'actionAdminMetaControllerUpdate_optionsAfter', 1, '2017-12-19 23:02:55', '2017-12-19 23:03:40'),
 (17, 2, 'configuration', 'PS_SMARTY_FORCE_COMPILE', '!=', '2', '1', 'hook', 'actionAdminPerformanceControllerSaveAfter', 1, '2017-12-19 23:02:56', '2017-12-19 23:03:41'),
-(18, 3, 'configuration', 'PS_CSS_THEME_CACHE', '==', '1', '', 'hook', 'actionAdminPerformanceControllerSaveAfter', 0, '2017-12-19 23:02:56', '2017-12-19 23:03:41'),
+(18, 3, 'configuration', 'PS_CSS_THEME_CACHE', '==', '1', '', 'hook', 'actionAdminPerformanceControllerSaveAfter', 0, '2017-12-19 23:02:56', '2017-12-19 23:14:21'),
 (19, 4, 'configuration', 'PS_CIPHER_ALGORITHM', '==', '1', '1', 'hook', 'actionAdminPerformanceControllerSaveAfter', 1, '2017-12-19 23:02:56', '2017-12-19 23:03:41'),
-(20, 5, 'configuration', 'PS_MEDIA_SERVERS', '==', '1', '', 'hook', 'actionAdminPerformanceControllerSaveAfter', 0, '2017-12-19 23:02:56', '2017-12-19 23:03:48'),
+(20, 5, 'configuration', 'PS_MEDIA_SERVERS', '==', '1', '', 'hook', 'actionAdminPerformanceControllerSaveAfter', 0, '2017-12-19 23:02:56', '2017-12-19 23:14:22'),
 (21, 6, 'sql', 'SELECT COUNT(distinct m.id_module) FROM PREFIX_hook h LEFT JOIN PREFIX_hook_module hm ON h.id_hook = hm.id_hook LEFT JOIN PREFIX_module m ON hm.id_module = m.id_module\r\nWHERE (h.name = \"displayPayment\" OR h.name = \"payment\") AND m.name NOT IN (\"bankwire\", \"cheque\", \"cashondelivery\")', '>', '0', '0', 'hook', 'actionModuleInstallAfter', 0, '2017-12-19 23:02:56', '2017-12-19 23:03:41'),
 (22, 7, 'sql', 'SELECT COUNT(distinct m.id_module) FROM PREFIX_hook h LEFT JOIN PREFIX_hook_module hm ON h.id_hook = hm.id_hook LEFT JOIN PREFIX_module m ON hm.id_module = m.id_module\r\nWHERE (h.name = \"displayPayment\" OR h.name = \"payment\") AND m.name NOT IN (\"bankwire\", \"cheque\", \"cashondelivery\")', '>', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2017-12-19 23:02:56', '2017-12-19 23:03:48'),
 (23, 8, 'sql', 'SELECT COUNT(*) FROM PREFIX_carrier WHERE name NOT IN (\"0\", \"My carrier\")', '>', '0', '0', 'hook', 'actionObjectCarrierAddAfter', 0, '2017-12-19 23:02:56', '2017-12-19 23:03:41'),
@@ -3202,7 +3202,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (104, NULL, NULL, 'PS_LOCALE_LANGUAGE', 'es', '0000-00-00 00:00:00', '2017-12-19 22:48:43'),
 (105, NULL, NULL, 'PS_LOCALE_COUNTRY', 'pe', '0000-00-00 00:00:00', '2017-12-19 22:48:43'),
 (106, NULL, NULL, 'PS_ATTACHMENT_MAXIMUM_SIZE', '8', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(107, NULL, NULL, 'PS_SMARTY_CACHE', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(107, NULL, NULL, 'PS_SMARTY_CACHE', '0', '0000-00-00 00:00:00', '2017-12-19 23:14:10'),
 (108, NULL, NULL, 'PS_DIMENSION_UNIT', 'cm', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (109, NULL, NULL, 'PS_GUEST_CHECKOUT_ENABLED', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (110, NULL, NULL, 'PS_DISPLAY_SUPPLIERS', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -3458,7 +3458,15 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (360, NULL, NULL, 'PS_ONBOARDING_STEP_2_COMPLETED', '0', '2017-12-19 22:52:01', '2017-12-19 22:52:01'),
 (361, NULL, NULL, 'PS_ONBOARDING_STEP_3_COMPLETED', '0', '2017-12-19 22:52:01', '2017-12-19 22:52:01'),
 (362, NULL, NULL, 'PS_ONBOARDING_STEP_4_COMPLETED', '0', '2017-12-19 22:52:01', '2017-12-19 22:52:01'),
-(363, NULL, NULL, 'GF_NOT_VIEWED_BADGE', '125|141', '2017-12-19 23:04:05', '2017-12-19 23:04:05');
+(363, NULL, NULL, 'GF_NOT_VIEWED_BADGE', '125|141', '2017-12-19 23:04:05', '2017-12-19 23:04:05'),
+(364, NULL, NULL, 'PS_CSS_THEME_CACHE', '0', '2017-12-19 23:14:10', '2017-12-19 23:14:10'),
+(365, NULL, NULL, 'PS_JS_THEME_CACHE', '0', '2017-12-19 23:14:11', '2017-12-19 23:14:11'),
+(366, NULL, NULL, 'PS_HTML_THEME_COMPRESSION', '0', '2017-12-19 23:14:11', '2017-12-19 23:14:11'),
+(367, NULL, NULL, 'PS_JS_HTML_THEME_COMPRESSION', '0', '2017-12-19 23:14:11', '2017-12-19 23:14:11'),
+(368, NULL, NULL, 'PS_JS_DEFER', '0', '2017-12-19 23:14:11', '2017-12-19 23:14:11'),
+(369, NULL, NULL, 'PS_HTACCESS_CACHE_CONTROL', '0', '2017-12-19 23:14:11', '2017-12-19 23:14:11'),
+(370, NULL, NULL, 'PS_DISABLE_NON_NATIVE_MODULE', '0', '2017-12-19 23:14:11', '2017-12-19 23:14:11'),
+(371, NULL, NULL, 'PS_DISABLE_OVERRIDES', '0', '2017-12-19 23:14:11', '2017-12-19 23:14:11');
 
 -- --------------------------------------------------------
 
@@ -3516,7 +3524,8 @@ INSERT INTO `ps_configuration_kpi` (`id_configuration_kpi`, `id_shop_group`, `id
 (33, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_11_2017', '80', '2017-12-19 22:51:05', '2017-12-19 22:51:05'),
 (34, NULL, NULL, 'DASHGOALS_TRAFFIC_12_2017', '600', '2017-12-19 22:51:06', '2017-12-19 22:51:06'),
 (35, NULL, NULL, 'DASHGOALS_CONVERSION_12_2017', '2', '2017-12-19 22:51:06', '2017-12-19 22:51:06'),
-(36, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_12_2017', '80', '2017-12-19 22:51:06', '2017-12-19 22:51:06');
+(36, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_12_2017', '80', '2017-12-19 22:51:06', '2017-12-19 22:51:06'),
+(37, NULL, NULL, 'UPDATE_MODULES', '0', '2017-12-19 23:12:02', '2017-12-19 23:12:02');
 
 -- --------------------------------------------------------
 
@@ -9875,6 +9884,14 @@ CREATE TABLE `ps_smarty_last_flush` (
   `last_flush` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Volcado de datos para la tabla `ps_smarty_last_flush`
+--
+
+INSERT INTO `ps_smarty_last_flush` (`type`, `last_flush`) VALUES
+('compile', '2017-12-19 17:14:10'),
+('template', '2017-12-19 17:14:10');
+
 -- --------------------------------------------------------
 
 --
@@ -14152,12 +14169,12 @@ ALTER TABLE `ps_condition`
 -- AUTO_INCREMENT de la tabla `ps_configuration`
 --
 ALTER TABLE `ps_configuration`
-  MODIFY `id_configuration` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=364;
+  MODIFY `id_configuration` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=372;
 --
 -- AUTO_INCREMENT de la tabla `ps_configuration_kpi`
 --
 ALTER TABLE `ps_configuration_kpi`
-  MODIFY `id_configuration_kpi` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id_configuration_kpi` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 --
 -- AUTO_INCREMENT de la tabla `ps_connections`
 --
